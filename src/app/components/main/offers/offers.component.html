@@ -1,0 +1,114 @@
+<section id="offers" dir="rtl">
+    <div class="container">
+        <div class=" mx-4 pt-3">
+            <p class="head_1 text-center my-4"> العــــروض</p>
+        </div>
+        <div class="outerItem outerBorder shadow_5 my-3 w-75" style="margin: auto;overflow: auto;">
+            <table class="table table-striped text-center">
+                <thead class="tableHead">
+                    <th class="py-2">اســـم الشــركــه</th>
+                    <th>النــوع</th>
+                    <th>مبلــغ التأميــن</th>
+                    <th>القســـط</th>
+                    <th></th>
+                    <th></th>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor="let offer of AllCompanyInsurances">
+                        <td class="align-middle">
+                            {{this.companyName}}
+                        </td>
+                        <td class="align-middle">
+                            {{offer.insuranceType}}
+                        </td>
+                        <td class="align-middle">
+                            {{Price}}
+                        </td>
+                        <td class="align-middle">
+                            {{offer.insurancePrice*this.Price/100}}
+                        </td>
+                        <td class="align-middle">
+                            <button (click)="getAdventures(offer)" data-bs-toggle="modal" data-bs-target="#Adventures" mat-raised-button color="accent">المميزات</button>
+                        </td>
+                        <td class="align-middle">
+                            <button (click)="payment();SelectedPrimum=offer.insurancePrice*this.Price/100;seleInsType=offer.insuranceType" mat-raised-button color="primary">دفـــع</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+            <div id="loading" *ngIf="loading">
+                <app-spinner class="d-flex justify-content-center m-auto"></app-spinner>
+            </div>
+        </div>
+    </div>
+        <!--------------------------------------- Personal carts --------------------------->
+        <div class="modal fade" id="PersonalCarts" tabindex="-1" aria-labelledby="PersonalCarts" aria-hidden="true" dir="rtl">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="head_1 modal-title fs-5">مـن فضلــك ارفـق المستندات التاليه</h1>
+                    </div>
+                    <div class="container">
+                        <div class="outerBorder shadow_5 my-5">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <p class="check-app">بطاقه الرقم القومي </p>
+                                    <i (click)="NationalIdInput.click()" class="fa-solid fa-cloud-arrow-up fs-2 px-2 py-2" style="color:#3F51B5;border-radius: 5px;"></i>
+                                    <input hidden (change)="uploadNationalId($event)" #NationalIdInput type="file">
+                                    <span class="file-name">{{this.selectedNationalId?.name}}</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="check-app">رخصــه السيـــاره</p>
+                                    <i (click)="CarInput.click()" class="fa-solid fa-cloud-arrow-up fs-2 px-2 py-2" style="color:#3F51B5;border-radius: 5px;"></i>
+                                    <input hidden (change)="uploadCar($event)" #CarInput type="file">
+                                    <span class="file-name">{{this.selectedCar?.name}}</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="check-app">رخصـه القيـاده الشخصيـه</p>
+                                    <i (click)="CarLicenceInput.click()" class="fa-solid fa-cloud-arrow-up fs-2 px-2 py-2" style="color:#3F51B5;border-radius: 5px;"></i>
+                                    <input hidden (change)="uploadCarLicence($event)" #CarLicenceInput type="file">
+                                    <span class="file-name">{{selectedCArLicence?.name}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button [disabled]="isClicked" (click)="SubmitPersonalImagesUrl()" mat-raised-button color="primary" class="mb-2 my-5 w-25">
+                            <span *ngIf="!isClicked">حفــظ</span>
+                            <span *ngIf="isClicked"><i class="fa-solid fa-fan fa-spin"></i></span>
+                        </button>
+                        <button  type="button" mat-raised-button
+                        data-bs-dismiss="modal" class="my-5 mb-2 mx-1">أغلق</button>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------------- Adventures --------------------------->
+        <div class="modal fade" id="Adventures" tabindex="-1" aria-labelledby="Adventures" aria-hidden="true" dir="rtl">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="head_1 modal-title fs-5">المميــزات</h1>
+                    </div>
+                    <div class="container">
+                        <div class="outerBorder shadow_5 my-5">
+                            <div class="row">
+                               <p class="check-app text-center">{{this.Adventures?.consumptionRatios}} </p> <br>
+                               <hr class="py-2" style="width: 80%;margin: auto;">
+                               <p class="check-app text-center">{{this.Adventures?.saviors}} </p> <br>
+                               <hr class="py-2" style="width: 80%;margin: auto;">
+                               <p class="check-app text-center">{{this.Adventures?.policeReport}} </p>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="modal-footer py-3">
+                    <button  type="button" mat-raised-button
+                        data-bs-dismiss="modal">أغلق</button>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+</section>

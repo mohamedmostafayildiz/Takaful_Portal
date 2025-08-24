@@ -1,0 +1,41 @@
+<div id="home-calculations">
+    <div class="container">
+        <div class=" mx-4 pt-3">
+            <p class="head_1 text-center my-4">Net Premium And Total Installment</p>
+        </div>
+        <div class="outerItem outerBorder shadow_5 my-3 w-75" style="margin: auto; overflow: auto;">
+            <table class="table table-striped table-bordered text-center mt-2" style="border-radius: 20px;">
+                <tbody class="align-middle">
+                    <tr *ngIf="this.HomeCalculationas?.premiumForBuilding!=null">
+                        <th class="w-30 py-3">Premium For Building</th>
+                        <td class="w-60 py-3">
+                            {{this.HomeCalculationas?.premiumForBuilding}}
+                        </td>
+                    </tr>
+                    <tr *ngIf="this.HomeCalculationas?.totalInstallmentForBuilding!=null">
+                        <th class="w-30 py-3">Total Installment For Building</th>
+                        <td class="w-60 py-3">
+                            {{this.HomeCalculationas?.totalInstallmentForBuilding}}
+                        </td>
+                    </tr>
+                    <tr *ngIf="this.HomeCalculationas?.premiumForContent!=null">
+                        <th class="w-30 py-3">Premium For Content</th>
+                        <td class="w-60 py-3">
+                            {{this.HomeCalculationas?.premiumForContent}}
+                        </td>
+                    </tr>
+                    <tr *ngIf="this.HomeCalculationas?.totalInstallmentForContent!=null"> 
+                        <th class="w-30 py-3">Total Installment For Content</th>
+                        <td class="w-60 py-3">
+                            {{this.HomeCalculationas?.totalInstallmentForContent}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button mat-raised-button color="primary" routerLink="/PaymnetDetails">Ok </button>
+            <div id="loading" *ngIf="loading">
+                <app-spinner class="d-flex justify-content-center m-auto"></app-spinner>
+            </div>
+        </div>
+    </div>
+</div>

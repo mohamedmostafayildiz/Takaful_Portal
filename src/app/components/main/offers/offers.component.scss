@@ -1,0 +1,13 @@
+#offers{
+    min-height: 83vh;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    background-color: #f0f4f9;
+    background-image: url(../../../../assets/imgs/bg_2.png);
+    background-position: center center;
+}
+.modal{
+    --bs-modal-width:60%;
+}
+.check-app{
+    font-family: 'El Messiri', sans-serif!important;
+}

@@ -1,0 +1,60 @@
+.container{
+    width: 100%;
+    height: 800px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: var(--background, #FFF);
+    margin-top: 20px;
+}
+.text{
+    color: var(--primary, #033291);
+    font-family: Poppins;
+    font-size: 1.1rem;
+    font-family: 'El Messiri', sans-serif!important;
+    font-weight: 500;
+    line-height: normal;
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 30px;
+}
+.section1{
+    width: 99%;
+    height: 380px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: var(--background, #FFF);
+    padding-left: 20px;
+}
+.row{
+    padding-right: 10px;
+    margin-right: 0px;
+}
+.form-control{
+    border-radius: 8px;
+    background: #EDF0F5;
+}
+.text-1{
+    color: var(--primary, #334CAB);
+    text-align: right;
+    font-family: 'El Messiri', sans-serif!important;
+    font-size: .8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.section2{
+    width: 99%;
+    height: 100px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: var(--background, #FFF);
+    padding-left: 20px;
+}
+.section3{
+    width: 99%;
+    height: 200px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: var(--background, #FFF);
+    padding-left: 20px;
+}

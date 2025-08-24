@@ -1,0 +1,74 @@
+.container{
+    border-radius: 12px;
+background: var(--background, #FFF);
+box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.07);
+}
+.text{
+    color: #334CAB;
+    font-family: 'El Messiri', sans-serif!important;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    padding-top: 2rem;
+}
+.text1{
+    color: #334CAB;
+    text-align: right;
+    font-family: 'El Messiri', sans-serif!important;
+    font-size: .8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    position: relative;
+    top:10px;
+    right: 0;
+}
+.form-control{
+    border-radius: 8px;
+    background: #EDF0F5;
+}
+.row{
+    position: relative;
+    padding-right: 25px;
+}
+.img1{
+   width: 40px;
+   height: 40px;
+   position: absolute;
+    top: 35px;
+    left: 15%;
+}
+.img2{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+     top: 35px;
+     left: 15%;
+}
+.img3{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+     top: 35px;
+     left: 15%;
+}
+.img{
+    width: 100%;
+    height: 85%;
+    padding-top: 50px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.butto{
+    border-radius: 8px;
+    background: #334CAB;
+    color: var(--background, #FFF);
+    font-family: 'El Messiri', sans-serif!important;
+    font-size: .7rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 4rem;
+}

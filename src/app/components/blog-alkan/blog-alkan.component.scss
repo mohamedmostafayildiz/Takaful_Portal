@@ -1,0 +1,49 @@
+.container{
+    width: 100%;
+    background-color: #F6F8FD;
+    box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.07);
+    padding-right: 40px;
+    padding-left: 40px;
+    position: relative;
+}
+.text{
+    color: #324BA9;
+    font-family: 'El Messiri', sans-serif!important;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: right;
+    padding-top: 35px;
+}
+.prgraf{
+color: #535353;
+text-align: right;
+font-family: 'El Messiri', sans-serif!important;
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+position: absolute;
+right: 0;
+top: 70px;
+padding-right: 40px;
+padding-top: 10px;
+}
+.row{
+    margin-top: 5px;
+}
+.image{
+    width: 325px;
+    height: 225px;
+}
+.prgraph{
+color: #535353;
+text-align: right;
+font-family: 'El Messiri', sans-serif!important;
+font-size: 1rem;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+padding-bottom: 50px;
+}

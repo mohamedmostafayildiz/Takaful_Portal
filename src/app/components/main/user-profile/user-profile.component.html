@@ -1,0 +1,75 @@
+<div id="userProfile">
+    <div class="container">
+        <!-- <div class=" mx-4 pt-3">
+            <p class="head_1 text-center my-4"> العــــروض</p>
+        </div> -->
+        <div class="outerItem outerBorder shadow_5 my-5 w-75" style="margin: auto;overflow: auto;">
+            <table class="table table-striped text-center">
+                <thead class="tableHead">
+                    <th class="py-2">الاســم</th>
+                    <th class="py-2">اجمالي الأقسـاط</th>
+                    <th class="py-2">الصــافي</th>
+                    <th class="py-2">مبلــغ التأميــن</th>
+                    <th class="py-2"></th>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor="let item of userPolices">
+                        <td class="align-middle">
+                            {{item.policyName}}
+                        </td>
+                        <td class="align-middle">
+                           {{item.grossPremium}}
+                        </td>
+                        <td class="align-middle">
+                            {{item.netPremium}}
+                        </td>
+                        <td class="align-middle">
+                            {{item.sumInsurance}}
+                        </td>
+                        <td class="align-middle">
+                            <button (click)="getPolicyId(item.policyId)" data-bs-toggle="modal" data-bs-target="#AccidentMoal" mat-raised-button color="accent">Accident</button>
+                        </td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+            <div id="loading" *ngIf="loading">
+                <app-spinner class="d-flex justify-content-center m-auto"></app-spinner>
+            </div>
+        </div>
+    </div>
+    <!-- Accident -->
+    <div class="modal fade" id="AccidentMoal" tabindex="-1" aria-labelledby="Adventures" aria-hidden="true" dir="rtl">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="head_1 modal-title fs-5">المميــزات</h1>
+                </div>
+                <div class="container">
+                    <div class="outerBorder shadow_5 my-5">
+                        <div class="row d-flex justify-content-center">
+                           <div class="col-md-6">
+                                <mat-form-field style="margin-bottom: -1.05em!important" class="example-full-width w-100">
+                                    <mat-label>ادخل كل تفاصيل الحــادث</mat-label>
+                                    <textarea [(ngModel)]="accidentDetails" matInput></textarea>
+                                    <mat-icon matIconSuffix> <i class="fa-regular fa-message"></i></mat-icon>
+                                </mat-form-field>
+                                <input accept="png, jpeg ,jpg ,svg " (change)="uploadImages($event)" type="file" class="form-control">
+                           </div>
+                        </div>
+                </div>
+                <hr>
+            </div>
+            <div class="modal-footer py-3 d-flex justify-content-between">
+                <button [disabled]="this.isClicked" (click)="saveAccident()" type="button" mat-raised-button
+                    color="primary">حفــظ</button>
+                <button (click)="saveAccident()" type="button" mat-raised-button
+                    data-bs-dismiss="modal">أغلــق</button>
+                
+            </div>
+        </div>
+        
+    </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+.container{
+padding-top: 15px;
+width: 500px;
+height: 500px;
+border-radius: 12px;
+background: var(--background, #FFF);
+box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.07);
+margin-top: 50px;
+}
+.text{
+color: #324BA9;
+text-align: center;
+font-family: 'El Messiri', sans-serif!important;
+font-size: 1.3rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+padding-top: 20px;
+}
+.text1{
+color: var(--primary, #334CAB);
+font-family: 'El Messiri', sans-serif!important;
+text-align: start;
+font-size: .9rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.form-control{
+border-radius: 8px;
+background: #EDF0F5;
+}
+.row{
+    padding-right: 40px;
+    padding-left: 40px;
+}
+.forgot{
+    border-radius: 8px;
+    background: #334CAB;
+    margin-top: 20px;
+    left: 70px;
+    height: 40px;
+    bottom: 50px;
+    
+    }

@@ -1,0 +1,86 @@
+<section id="compensation" class="py-5" dir="rtl">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-8">
+                <p class="head_1 py-3 px-4">التعويضات</p>
+                <div class="outerBorder shadow_5">
+                    
+                    <div class="row py-3">
+                        <!-- col 1 -->
+                        <div class="col-md-6">
+                            <mat-form-field class="w-100" appearance="fill" color="primary" data-aos-duration="700" data-aos="zoom-in">
+                                <mat-label>رقـــم الوثيقه ..</mat-label>
+                                <input type="number" matInput>
+                                <mat-icon matIconSuffix style="color: rgba(0, 0, 0, 0.5);"> <i class="fa-solid fa-hashtag"></i></mat-icon>
+                            </mat-form-field>
+                            <mat-form-field class="w-100" appearance="fill" color="primary" data-aos-duration="700" data-aos="zoom-in">
+                                <mat-label>رقـم التليفـون ..</mat-label>
+                                <input type="number" matInput>
+                                <mat-icon matIconSuffix style="color: rgba(0, 0, 0, 0.5);">phone_iphone</mat-icon>
+                            </mat-form-field>
+                        </div>
+                        <!-- col 2 -->
+                        <div class="col-md-6">
+                            <mat-form-field class="w-100" appearance="fill" color="primary" data-aos-duration="700" data-aos="zoom-in">
+                                <mat-label>الاســـم..</mat-label>
+                                <input type="text" matInput>
+                                <mat-icon matIconSuffix style="color: rgba(0, 0, 0, 0.5);"> perm_identity</mat-icon>
+                            </mat-form-field>
+                            <mat-form-field class="w-100" appearance="fill" color="primary" data-aos-duration="700" data-aos="zoom-in">
+                                <mat-label>بريدك الالكتروني ..</mat-label>
+                                <input type="text" matInput>
+                                <mat-icon matIconSuffix style="color: rgba(0, 0, 0, 0.5);">email</mat-icon>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <p class="check-app py-2">تحميل الصور:</p>
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <div>
+                                <p class="check-appp">رخصة سائق المركبة أثناء الحادث (الأمام) *</p>
+                                <i (click)="fileInput.click()" class="fa-solid fa-cloud-arrow-up fs-2 px-2 py-2" style="color:#3F51B5;border-radius: 5px;"></i>
+                                <input hidden (change)="uploadFile($event)" #fileInput type="file">
+                                <span class="file-name">{{selectedFile?.name}}</span>
+                            </div>
+                            <div>
+                                <p class="check-appp">البطاقة (الأمام) *</p>
+                                <i (click)="fileInput.click()" class="fa-solid fa-cloud-arrow-up fs-2 px-2 py-2" style="color:#3F51B5;border-radius: 5px;"></i>
+                                <input hidden (change)="uploadFile($event)" #fileInput type="file">
+                                <span class="file-name">{{selectedFile?.name}}</span>
+                            </div>
+                            <div>
+                                <p class="check-appp">صور الحادث *</p>
+                                <i (click)="fileInput.click()" class="fa-solid fa-cloud-arrow-up fs-2 px-2 py-2" style="color:#3F51B5;border-radius: 5px;"></i>
+                                <input hidden (change)="uploadFile($event)" #fileInput type="file">
+                                <span class="file-name">{{selectedFile?.name}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <p class="check-appp">رخصة سائق المركبة أثناء الحادث (الخلف) *</p>
+                                <i (click)="fileInput.click()" class="fa-solid fa-cloud-arrow-up fs-2 px-2 py-2" style="color:#3F51B5;border-radius: 5px;"></i>
+                                <input hidden (change)="uploadFile($event)" #fileInput type="file">
+                                <span class="file-name">{{selectedFile?.name}}</span>
+                            </div>
+                            <div>
+                                <p class="check-appp">البطاقة (الخلف) *</p>
+                                <i (click)="fileInput.click()" class="fa-solid fa-cloud-arrow-up fs-2 px-2 py-2" style="color:#3F51B5;border-radius: 5px;"></i>
+                                <input hidden (change)="uploadFile($event)" #fileInput type="file">
+                                <span class="file-name">{{selectedFile?.name}}</span>
+                            </div>  
+                        </div>
+                        <hr style="width: 80%;margin: auto;" class="my-2">
+                        <button mat-raised-button color="primary" class="mt-2 w-25 m-auto">ارســال	<mat-icon>send</mat-icon> </button>
+
+                    </div>
+                    
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>

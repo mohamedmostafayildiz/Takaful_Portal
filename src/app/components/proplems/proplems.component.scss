@@ -1,0 +1,47 @@
+.container1{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+height: 450px;
+background: var(--background, #FFF);
+position: relative;
+
+}
+.container{
+    border-radius: 8px;
+    background: var(--background, #FFF);
+    
+    box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.09);
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    right: 20px;
+}
+.text{
+    color: var(--primary, #033291);
+    text-align: right;
+    font-family: 'El Messiri', sans-serif!important;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2rem;
+    padding-right: 40px;
+}
+.p{
+ color: var(--primary, #033291);
+
+text-align: right;
+font-family: 'El Messiri', sans-serif!important;
+font-size: .8px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.outerBorder{
+    background-color: #FFF;
+}
+.complains-link{
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}

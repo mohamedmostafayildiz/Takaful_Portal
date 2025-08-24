@@ -1,0 +1,279 @@
+.container{
+border-radius: 12px;
+background: var(--background, #FFF);
+box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.07);
+height: 500px;
+margin-top: 25px;
+}
+.text{
+color: #324BA9;
+text-align: center;
+font-family: 'El Messiri', sans-serif!important;
+font-size: 1.1rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+padding-top: 15px;
+}
+.visa{
+    width: 90%;
+    height: 60px;
+    background-color: #EDF0F5;
+    margin-right: 25px;
+    position: relative;
+}
+.mastercard{
+    width: 90%;
+    height: 60px;
+    background-color: #EDF0F5;
+    margin-right: 25px;
+    position: relative;
+}
+.vodafone{
+    width: 90%;
+    height: 60px;
+    background-color: #EDF0F5;
+    margin-right: 25px;
+    position: relative;
+
+}
+.fawry{
+    width: 90%;
+    height: 60px;
+    background-color: #EDF0F5;
+    margin-right: 25px;
+    position: relative;
+    
+
+}
+.visaradio{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 40px;
+    top:20px;
+    cursor: pointer;
+
+}
+.masterradio{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 40px;
+    top:20px;
+    cursor: pointer;
+
+}
+.vodafoneradio{
+    width: 20px;
+    height: 20px;
+    left: 40px;
+    top:20px;
+    cursor: pointer;
+
+}
+.fawryradio{
+    width: 20px;
+    height: 20px;
+    left: 40px;
+    top:20px;
+    cursor: pointer;
+
+}
+.visatext{
+color: #324BA9;
+text-align: center;
+font-family: 'El Messiri', sans-serif!important;
+font-size: .9rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+position: absolute;
+top: 20px;
+right: 110px;
+}
+.mastertext{
+color: #324BA9;
+text-align: center;
+font-family: 'El Messiri', sans-serif!important;
+font-size: .9rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+position: absolute;
+top: 20px;
+right: 110px;
+}
+.vodafonetext{
+color: #324BA9;
+text-align: center;
+font-family: 'El Messiri', sans-serif!important;
+font-size: .9rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+position: absolute;
+top: 20px;
+right: 110px;
+}
+.fawrytext{
+color: #324BA9;
+text-align: center;
+font-family: 'El Messiri', sans-serif!important;
+font-size: .9rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+position: absolute;
+top: 20px;
+right: 110px;
+}
+.visaimg{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 30px;
+    
+}
+.Masterimg{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 30px;
+    border-radius: 15px;
+
+}
+.vodafoneimg{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 30px;
+}
+.fawryimg{
+     width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 30px;
+}
+.butto{
+    margin-right: 50px;
+    border-radius: 8px;
+    background: var(--primary, #334CAB);
+}
+.sec{
+    background-color: #324BA9;
+    // padding: 47px 31px;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+.sec1{
+    background-color: #F16E17;
+    text-align: center;
+    font-family: 'El Messiri', sans-serif!important;
+    font-size: .6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    height: 1.5rem;
+}
+.sec2{
+    color: var(--background, #FFF);
+    font-family: 'El Messiri', sans-serif!important;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+hr{
+    color: white;
+    height: 2px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.year{
+    color: white;
+    text-align: center;
+    font-family: 'El Messiri', sans-serif!important;
+    font-size: .8rem;
+    font-style: normal;
+    // font-weight: 700;
+    line-height: 110%;
+}
+.yeardetails{
+    color: #6B77E5;
+    text-align: center;
+    font-family: 'El Messiri', sans-serif!important;
+    font-size: .7rem;
+    font-style: normal;
+    // font-weight: 500;
+    line-height: 157.4%;
+    background-color: white;
+    margin-right: 130px;
+    margin-left: 130px;
+    height: 25px;
+    
+}
+.price{
+    color: var(--background, #FFF);
+    text-align: center;
+    font-family: 'El Messiri', sans-serif!important;
+    font-size: .7rem;
+    font-style: normal;
+    // font-weight: 500;
+    line-height: normal;
+}
+.butto1{
+    border-radius: 4px;
+    background: var(--background, #FFF);
+    color: #334CAB;
+    text-align: center;
+    font-family: 'El Messiri', sans-serif!important;
+    font-size: .8rem;
+    font-style: normal;
+    // font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+}
+.butto2{
+    border-radius: 4px;
+    background: var(--background, #FFF);
+    color: #F16E17;
+    text-align: center;
+    font-family: 'El Messiri', sans-serif!important;
+    font-size: .8rem;
+    font-style: normal;
+    // font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.customBorder{
+    border-left: solid 1px gray;
+}
+
+
+@media all and (max-width:750px){
+    html{
+        font-size: 14px!important;
+    }
+    #objectInputs{
+        width: 100%!important;
+    }
+    .mdc-button{
+        font-size: 12px;
+    }
+    .container{
+        height: 900px;
+    }
+    }
+// .circle{
+//     width: 25px;
+//     height: 25px;
+//     position: relative;
+//     top: -120px;
+//     right: 65%;
+//     cursor: pointer;
+// }

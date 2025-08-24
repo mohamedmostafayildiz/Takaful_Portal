@@ -1,0 +1,30 @@
+
+    //Side Nav
+mat-sidenav-container{
+  min-height: 92.4vh;
+}
+.mat-drawer-inner-container{
+      overflow: initial!important
+}
+mat-sidenav{
+  width:250px;
+
+}
+
+app-sidebar {
+  min-height: 80vh!important;
+}
+
+
+.loaderContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+mat-sidenav-content{
+  min-height: 100vh !important;
+  // min-height: 97vh;
+  background-image: url(../assets/imgs/bg_2.png);
+  box-shadow: rgb(180, 178, 178) 0px 3px 15px 0px inset!important;
+  // background-color: #f0f4f9;
+}

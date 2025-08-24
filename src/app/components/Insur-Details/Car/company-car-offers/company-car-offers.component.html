@@ -1,0 +1,128 @@
+<div id="section" dir="rtl">
+    <h2 class="text">التأمين على كيا سبورتاج 2024 - {{this.companyName}}</h2>
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <div class="row justify-content-center outerItem">
+                <div class="col-md-4" *ngFor="let item of AllCompanyInsurances">
+                    <div class="sec shadow_5" style="background: #F4F4F4;">
+                        <div class="sec2" style="color: var(--primary, #033291); padding-top: 15px;">{{item.insuranceType}}</div>
+                        <hr style="background: #D3D3D3;">
+                        <h2 class="year" style="color: var(--primary, #033291);">الأشتراك السنوي</h2>
+                        <p class="yeardetails">{{item.insurancePrice*this.Price/100}} جم</p>
+                        <hr style="background: #D3D3D3;">
+                        <h2 class="price" style="color: var(--primary, #033291);">سعر السيارة: {{Price}} جم</h2>
+                        <h2 class="price" style="color: var(--primary, #033291);">نسبة التحمل: 0%</h2>
+                        <h2 class="price" style="color: #838383;">السعر شامل الضريبة و الدفعة </h2>
+                        <div class="d-flex justify-content-center">
+                            <button class="btn butto1 mx-3" style="background: #F16E17;" (click)="payment()">احصل على العرض</button>
+                        </div>
+                        <div class="d-flex justify-content-center mt-3">
+                            <button (click)="getAdventures(item)" data-bs-toggle="modal" data-bs-target="#Adventures" class="btn butto2 mx-3" style="background: var(--background, #FFF);">تفاصيل العرض</button>
+                        </div>
+        
+                        
+                    </div>
+                </div>
+                <!-- <div class="col-4">
+                    <div class="sec" >
+                        <div class="sec1 text-white">افضل العروض</div>
+                        <div class="sec2">Advanced</div>
+                        <hr>
+                        <h2 class="year">الأشتراك السنوي</h2>
+                        <p class="yeardetails">24,500 جم</p>
+                        <hr>
+                        <h2 class="price">سعر السيارة: 700,00جم</h2>
+                        <h2 class="price">نسبة التحمل: 0%</h2>
+                        <h2 class="price">السعر شامل الضريبة و الدفعة </h2>
+                        <div class="d-flex justify-content-center">
+                            <button class="btn butto1 mx-3">احصل على العرض</button>
+                        </div>
+                        <div class="d-flex justify-content-center mt-3">
+                            <button class="btn butto2 mx-3">تفاصيل العرض</button>
+                        </div>
+        
+                        <div></div>
+                    </div>
+                </div> -->
+                <div id="loading" *ngIf="loading">
+                    <app-spinner class="d-flex justify-content-center m-auto"></app-spinner>
+                </div>
+            </div>
+        </div>
+        <div class="col-1"></div>
+    </div>
+</div>
+
+<section id="offers" dir="rtl">
+    <div class="container">
+    </div>
+        <!--------------------------------------- Personal carts --------------------------->
+        <div class="modal fade" id="PersonalCarts" tabindex="-1" aria-labelledby="PersonalCarts" aria-hidden="true" dir="rtl">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="head_1 modal-title fs-5">مـن فضلــك ارفـق المستندات التاليه</h1>
+                    </div>
+                    <div class="container">
+                        <div class="outerBorder shadow_5 my-5">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <p class="check-app">بطاقه الرقم القومي </p>
+                                    <i (click)="NationalIdInput.click()" class="fa-solid fa-cloud-arrow-up fs-2 px-2 py-2" style="color:#3F51B5;border-radius: 5px;"></i>
+                                    <input hidden (change)="uploadNationalId($event)" #NationalIdInput type="file">
+                                    <span class="file-name">{{this.selectedNationalId?.name}}</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="check-app">رخصــه السيـــاره</p>
+                                    <i (click)="CarInput.click()" class="fa-solid fa-cloud-arrow-up fs-2 px-2 py-2" style="color:#3F51B5;border-radius: 5px;"></i>
+                                    <input hidden (change)="uploadCar($event)" #CarInput type="file">
+                                    <span class="file-name">{{this.selectedCar?.name}}</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="check-app">رخصـه القيـاده الشخصيـه</p>
+                                    <i (click)="CarLicenceInput.click()" class="fa-solid fa-cloud-arrow-up fs-2 px-2 py-2" style="color:#3F51B5;border-radius: 5px;"></i>
+                                    <input hidden (change)="uploadCarLicence($event)" #CarLicenceInput type="file">
+                                    <span class="file-name">{{selectedCArLicence?.name}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button [disabled]="isClickedImgs" (click)="SubmitPersonalImagesUrl()" mat-raised-button color="primary" class="mb-2 my-5 w-25">
+                            <span *ngIf="isClickedImgs"><i class="fa-solid fa-fan fa-spin"></i></span>
+                            <span *ngIf="!isClickedImgs">حفـظ</span>
+                        </button>
+                        <button  type="button" mat-raised-button
+                        data-bs-dismiss="modal" class="my-5 mb-2 mx-1">أغلق</button>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------------- Adventures --------------------------->
+        <div class="modal fade" id="Adventures" tabindex="-1" aria-labelledby="Adventures" aria-hidden="true" dir="rtl">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="head_1 modal-title fs-5">المميــزات</h1>
+                    </div>
+                    <div class="container">
+                        <div class="outerBorder shadow_5 my-5">
+                            <div class="row">
+                               <p class="check-app text-center">{{this.Adventures?.consumptionRatios}} </p> <br>
+                               <hr class="py-2" style="width: 80%;margin: auto;">
+                               <p class="check-app text-center">{{this.Adventures?.saviors}} </p> <br>
+                               <hr class="py-2" style="width: 80%;margin: auto;">
+                               <p class="check-app text-center">{{this.Adventures?.policeReport}} </p>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="modal-footer py-3">
+                    <button  type="button" mat-raised-button
+                        data-bs-dismiss="modal">أغلق</button>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+</section>

@@ -1,0 +1,51 @@
+<div class="section" style="background-color: white; height: 700px; position: relative;" dir="rtl">
+    <div class="row" style="position: relative; ">
+        <img src="../../../../assets/imgs/Import.png" style="height: 200px;">
+        <p class="new text-white fs-4" style="position: absolute; right: 200px; top: 90px;">إخطار المطالبات</p>
+        
+    </div>
+    <div class="container">
+        <form>
+            <h2 class="text">تعويضات حماية المسكن</h2>
+            <div class="row mt-2">
+                <div class="col-6">
+                    <h2 class="text1">اخطار الحادث</h2>
+                    <div style="position: relative;">
+                        <input class="form-control" readonly value="{{selecteditem.name}}">
+                        <input (change)="uploadeitem1($event)" class="form-control" type="file" hidden #item1>
+                        <i (click)="item1.click()" class="logo fa-solid fa-arrow-up-from-bracket fs-5" style="color: #334CAB;"></i>
+                    </div>
+                    <!-- <img class="img1" src="../../../../assets/imgs/Uploading.svg"> -->
+                </div>
+                <div class="col-6">
+                    <h2 class="text1">محضر شرطة بالواقعة</h2>
+                    <div style="position: relative;">
+                        <input class="form-control" readonly value="{{selecteditem2.name}}" >
+                        <input (change)="uploadeitem2($event)" class="form-control" type="file" hidden #item2>
+                        <i (click)="item2.click()" class="logo fa-solid fa-arrow-up-from-bracket fs-5 "style="color: #334CAB;"></i>
+                    </div>
+                    <!-- <img class="img2" src="../../../../assets/imgs/Uploading.svg"> -->
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col-6 mt-2">
+                    <h2 class="text1">مقايسة بإصلاح التلفيات</h2>
+                    <div style="position: relative;">
+                        <input class="form-control" readonly value="{{selecteditem3.name}}">
+                        <input (change)="uploadeitem3($event)" class="form-control" type="file" hidden #item3>
+                        <i (click)="item3.click()" class="logo fa-solid fa-arrow-up-from-bracket fs-5" style="color: #334CAB;"></i>
+                    </div>
+                    <!-- <img class="img3" src="../../../../assets/imgs/Uploading.svg"> -->
+                </div>
+                <div class="col-6"></div>
+            </div>
+            <div class="d-flex justify-content-center mt-5">
+                <button type="button" class="btn butto w-25 py-2">ارسال</button>
+            </div>
+            <div class="row d-flex justify-content-start py-4">
+                <p class="text5">أو أرسل لنا بريد إلكترونى على<a href="mailto:khaled.yousef@alkan.com">khaled.yousef@alkan.com</a><br>أو الاتصال علي<a href="tel:01002644495">01002644495</a> .</p>
+            </div>
+        </form>
+    </div>
+
+</div>
