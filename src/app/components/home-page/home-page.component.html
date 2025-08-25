@@ -1,0 +1,81 @@
+<nav class="navbar">
+  <div class="container">
+    <div class="logo">
+      <img src="assets/imgs/logo2.jpg" alt="Logo" />
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#">الرئيسية</a></li>
+      <li><a href="#">من نحن</a></li>
+      <li><a href="#">أنواع التأمين</a></li>
+      <li><a href="#">الأسئلة الشائعة</a></li>
+      <li><a href="#">تواصل معنا</a></li>
+    </ul>
+    <div class="auth-buttons">
+       <button class="login" routerLink="/login"> تسجيل دخول</button>
+     <button class="signup" routerLink="/signup">إنشاء حساب</button>
+
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <img src="assets/imgs/Landing page.png" alt="Logo" />
+  <div class="content">
+    <h1>مصر للتأمين التكافلي</h1>
+    <p>احصل على تأمينك الصحي أو على سيارتك في خطوات بسيطة وآمنة.</p>
+    <button class="start-btn">ابدأ الآن</button>
+  </div>
+</section>
+
+<section class="about-section">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>عن مصر للتأمين التكافلي</h2>
+      <p>
+        شركة مصر للتأمين التكافلي - ممتلكات ومسؤوليات - تراوُل كافة أنواع التأمين على الممتلكات والمسؤوليات وفقًا لأحكام
+        الشريعة من خلال فريق عمل ذو خبرة على إدارة العملية التكافلية ومتخصص في دراسة وتحليل المخاطر التي يمكن أن يتعرض
+        لها العملاء واقتراح وتصميم أفضل البرامج التأمينية المناسبة لطبيعة الخطر وتحت إشراف اللجنة الشرعية.
+        نحن شركة مساهمة مصرية تأسست عام 2017 كأحدى الشركات الجديدة التي توفر خدمات التأمين التكافلي في مصر خاضعة لأحكام
+        قانون شركات المساهمة رقم 159 لسنة 1981 ولائحته التنفيذية وتمارس نشاطها تحت مظلة قانون الإشراف والرقابة على
+        التأمين في مصر رقم 10 لسنة 1981 واللائحة التنفيذية.
+      </p>
+      <button class="cta-btn">ابدأ الآن</button>
+    </div>
+    <div class="about-image">
+      <img src="assets/imgs/2.png" />
+    </div>
+  </div>
+</section>
+<section class="insurance-types-section">
+  <h2 class="section-title">أنواع التأمين</h2>
+  <div class="insurance-cards">
+    <div class="card" *ngFor="let type of insuranceTypes">
+      <img [src]="type.imgSrc" [alt]="type.alt" />
+      <p class="card-title">{{ type.title }}</p>
+    </div>
+  </div>
+</section>
+<section class="faq-section">
+  <h2 class="faq-title">كل اللي محتاج تعرفه قبل ما تبدأ</h2>
+  <p class="faq-subtitle">
+    جمعنالك أهم الأسئلة اللي ممكن تخطر في بالك قبل ما تبدأ رحلتك معانا — عشان تبقى مطمن وواثق في كل خطوة.
+  </p>
+<div class="faq-item" *ngFor="let faq of faqs; let i = index">
+  <div class="faq-question" (click)="toggleAnswer(i)">
+    <span>{{ faq.question }}</span>
+
+    <div class="faq-arrow" [class.active]="faq.open">
+      <span class="arrow-icon"></span>
+    </div>
+  </div>
+
+  <div class="faq-answer" *ngIf="faq.open">
+    {{ faq.answer }}
+  </div>
+</div>
+
+
+</section>
+
+

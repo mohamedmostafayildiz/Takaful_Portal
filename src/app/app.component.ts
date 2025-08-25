@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import * as AOS from 'aos';
 declare var $:any
 import { AuthService } from 'src/app/services/auth.service';
@@ -27,12 +26,7 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     AOS.init();
     
-     //Loader variable set false after page load
-  //    setTimeout(()=>{                           
-  //     this.loader = false;
-  // }, 1000);
-  // $('#date').datepicker({ dateFormat: 'dd-mm-yy' }).val();
-  
+ 
   }
 
 }

@@ -10,22 +10,4 @@
 <!--Loader Div Ends-->
 
 
-
-
-<div>
-  <!-- *ngIf="this._AuthService.isLoggedIn()" -->
-  <app-navbar (SideStatus)="handleSideBar()"></app-navbar>
-      <!-- SideBar -->
-<mat-sidenav-container class="shadow_1 " [dir]="'dir'| translate">
-  <mat-sidenav [(opened)]="opened" mode="side">
-    <app-sidebar></app-sidebar>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    
-    <router-outlet></router-outlet>
-    <!-- <app-footer></app-footer> -->
-  </mat-sidenav-content>
-
-</mat-sidenav-container>
-
-</div>
+<router-outlet></router-outlet>

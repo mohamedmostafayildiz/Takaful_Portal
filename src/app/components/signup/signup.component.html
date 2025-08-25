@@ -1,0 +1,49 @@
+<div class="register-container">
+    <div class="illustration">
+        <img src="assets/imgs/sign up.jpg" />
+    </div>
+
+    <div class="register-card">
+        <h2>إنشاء حساب جديد</h2>
+        <p>مرحبًا بك في منصة مصر للتأمين التكافلي</p>
+
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="form-field">
+                <label for="name">الاسم</label>
+                <input formControlName="name" type="text" id="name" placeholder="  الاسم" />
+                <div *ngIf="registerForm.get('name')?.touched && registerForm.get('name')?.invalid" class="error">
+                    الاسم مطلوب
+                </div>
+            </div>
+
+            <div class="form-field">
+                <label for="phone">رقم الهاتف</label>
+                <input formControlName="phone" type="text" id="phone" placeholder="اكتب رقم التواصل" />
+                <div *ngIf="registerForm.get('phone')?.touched && registerForm.get('phone')?.invalid" class="error">
+                    رقم هاتف غير صالح
+                </div>
+            </div>
+
+            <div class="form-field">
+                <label for="email">البريد الإلكتروني</label>
+                <input formControlName="email" type="email" id="email" placeholder="اكتب البريد الإلكتروني" />
+                <div *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.invalid" class="error">
+                    بريد إلكتروني غير صالح
+                </div>
+            </div>
+
+            <div class="form-field">
+                <label for="password">كلمة المرور</label>
+                <input formControlName="password" type="password" id="password" placeholder="قم بادخال كلمة المرور" />
+                <div *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.invalid"
+                    class="error">
+                    كلمة المرور مطلوبة
+                </div>
+            </div>
+
+            <button type="submit">إنشاء حساب</button>
+        </form>
+
+        <p class="login-link">هل لديك حساب؟  <a routerLink="/login"> تسجيل دخول</a></p>
+    </div>
+</div>
