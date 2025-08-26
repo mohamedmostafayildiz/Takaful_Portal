@@ -33,6 +33,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { ForgetpasswordComponent } from './components/forgetpassword/forgetpassword.component';
 import { OtpPageComponent } from './components/otp-page/otp-page.component';
+import { MainpageComponent } from './components/mainpage/mainpage.component';
 export function playerFactory(){
   return player;
 }
@@ -46,6 +47,7 @@ export function playerFactory(){
     LoginComponent,
     ForgetpasswordComponent,
     OtpPageComponent,
+    MainpageComponent,
   ],
   imports: [
     BrowserModule,

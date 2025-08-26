@@ -3,14 +3,11 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f7f7f7;
-    font-family: 'Arial', sans-serif;
     direction: ltr;
     padding: 20px;
 }
 
 .verify-email-card {
-    background-color: #fff;
     border-radius: 28px;
     padding: 40px 50px;
     max-width: 470px;
@@ -23,17 +20,16 @@
 }
 
 .illustration {
-    background-color: #f7f7f7;
     border-radius: 28px;
-    margin-right: 20px; 
+    margin-right: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-// fefefe
+
 .illustration img {
-  max-width: 400px; 
-  height: auto;
+    max-width: 400px;
+    height: auto;
 }
 
 h2 {
@@ -47,6 +43,10 @@ h2 {
 p {
     color: #292929;
     text-align: center;
+    max-height: 3em;
+    line-height: 1.5em;
+    overflow: hidden;
+
 }
 
 form {
@@ -91,13 +91,15 @@ button {
     font-weight: bold;
     cursor: pointer;
     margin-top: 10px;
-    width: 100%; 
+    width: 100%;
 }
+
 .resend-link {
     margin-top: 20px;
     font-size: 15px;
     color: #292929;
-margin-left: 200px;
+    margin-left: 150px;
+    white-space: nowrap;
 }
 
 .resend-link a {
@@ -105,4 +107,51 @@ margin-left: 200px;
     text-decoration: none;
     font-weight: bold;
 }
+@media (max-width: 768px) {
+  .verify-email-container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 10px;
+  }
 
+  .illustration {
+    order: -1; /* الصورة تظهر فوق */
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .illustration img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px; /* لو حابة */
+  }
+
+  .verify-email-card {
+    padding: 30px 20px;
+    min-height: auto;
+    width: 100%;
+  }
+
+  .code-inputs-container {
+    gap: 15px; /* تصغير المسافة بين مربعات الكود ع الفون */
+    justify-content: center;
+  }
+
+  .code-input {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .resend-link {
+    margin-left: 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  button {
+    padding: 14px 20px;
+  }
+}

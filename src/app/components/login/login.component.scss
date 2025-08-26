@@ -3,14 +3,11 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f7f7f7;
-  font-family: 'Arial', sans-serif;
   direction: ltr;
   padding: 20px;
 }
 
 .login-card {
-  background-color: #fff;
   border-radius: 28px;
   padding: 40px 50px;
   max-width: 470px;
@@ -24,7 +21,6 @@
 }
 
 .illustration {
-  background-color: #f7f7f7;
   border-radius: 28px;
   margin-left: 20px;
   display: flex;
@@ -33,21 +29,20 @@
 }
 
 .illustration img {
-  max-width: 400px; 
+  max-width: 400px;
   height: auto;
 }
-
 h2 {
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
-  color: #333;
+  color: #000000;
   margin-bottom: 6px;
 }
 
-.login-card  p {
-  color: #666;
+.login-card p {
+  color: #292929;
   margin-bottom: 24px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 form {
@@ -62,10 +57,11 @@ form {
 }
 
 label {
-  font-size: 14px;
-  color: #777;
+  font-size: 16px;
+  color: #1A1A1A;
   margin-bottom: 6px;
   text-align: right;
+  font-weight: bold;
 }
 
 input {
@@ -74,7 +70,6 @@ input {
   border: 1.5px solid #ddd;
   border-radius: 14px;
   font-size: 15px;
-  background-color: #fafafa;
   color: #333;
   transition: border-color 0.3s ease;
   box-sizing: border-box;
@@ -109,15 +104,12 @@ input:focus {
   width: 16px;
   height: 16px;
   cursor: pointer;
-}
-
-.checkbox-field label {
-  cursor: pointer;
+  accent-color: #47251B;
 }
 
 .forgot-link {
   font-size: 14px;
-  color: #5d4239;
+  color: #47251B;
   text-decoration: none;
   font-weight: bold;
 }
@@ -138,6 +130,7 @@ button {
   transition: background-color 0.3s ease;
   margin-top: 10px;
 }
+
 .signup-link {
   text-align: center;
   margin-top: 20px;
@@ -154,8 +147,41 @@ button {
 .signup-link a:hover {
   text-decoration: underline;
 }
+
 .error {
   color: #d87f7f;
   font-size: 13px;
   margin-top: 6px;
-  text-align: right; }
+  text-align: right;
+}
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column; 
+    height: auto; 
+    padding: 20px 10px;
+  }
+
+  .illustration {
+    order: -1; 
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 20px auto;
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .illustration img {
+    width: 100%; 
+    height: auto;
+    border-radius: 28px;
+  }
+
+  .login-card {
+    max-width: 100%;
+    width: 100%;
+    min-height: auto;
+    padding: 30px 20px;
+    text-align: center;
+  }
+}

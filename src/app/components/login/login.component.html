@@ -1,7 +1,7 @@
 <div class="login-container">
     <div class="login-card">
         <h2>تسجيل الدخول</h2>
-        <p>مرحبًا بك في منصة مصر للتأمين التكافلي</p>
+        <p>مرحبًا بك في افق منصة تعليميه متكافئة</p>
 
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div class="form-field">
@@ -14,7 +14,7 @@
             </div>
 
             <div class="form-field">
-                <label for="password">كلمة المرور</label>
+                <label for="password">الباسوورد </label>
                 <input formControlName="password" type="password" id="password" />
                 <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid" class="error">
                     كلمة المرور مطلوبة
@@ -30,7 +30,7 @@
 
             </div>
 
-            <button type="submit">تسجيل الدخول</button>
+            <button type="submit" routerLink="/mainpage">تسجيل دخول</button>
         </form>
     </div>
 

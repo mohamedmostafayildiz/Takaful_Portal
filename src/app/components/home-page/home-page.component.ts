@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent {
+   menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 insuranceTypes = [
     {
       imgSrc: 'assets/imgs/11.png',
@@ -49,5 +54,6 @@ insuranceTypes = [
   toggleAnswer(index: number) {
     this.faqs[index].open = !this.faqs[index].open;
   }
+  
 }
 

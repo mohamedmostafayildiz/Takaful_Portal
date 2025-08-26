@@ -11,7 +11,6 @@
   max-width: 400px; 
   height: auto;
 }
-
 .register-card {
   border: 1px solid #e0e0e0; 
   border-radius: 28px;
@@ -19,21 +18,21 @@
   padding: 30px;
   box-shadow: 0 16px 40px rgba(59, 31, 26, 0.18);
 }
-
 .register-card h2 {
   font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: #1a1a1a;
-  margin-left: 175px;
+  font-weight: 650;
+  margin-bottom: 15px;
+  color: #000000;
+  margin-left: 110px;
+  font-family: 'cairo';
 }
-
 .register-card p {
   color: #292929;
   font-size: 16px;
   margin-bottom: 28px;
-  font-weight: 400;
-  margin-left: 145px;
+  font-weight: 700;
+  margin-left: 125px;
+  font-family: 'cairo';
 }
 form {
     display: flex;
@@ -48,53 +47,52 @@ label {
     margin-bottom: 6px;
     text-align: right;
     display: block;
-    font-weight: 500;
+    font-weight: 700;
+    font-family: 'cairo';
 }
 input {
   width: 100%;
-  padding: 14px 30px 14px 16px;
-  border: 1.5px solid #ffffff;
+  padding: 14px 16px;
+  border: 1.5px solid #ddd;
   border-radius: 14px;
   font-size: 15px;
-  background-color: #fafafa;
   color: #333;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  text-align: right; 
 }
 
+input::placeholder {
+  color: #999;
+}
 input:focus {
   border-color: #a0a0a0;
   outline: none;
 }
-input::placeholder {
-  color: #949BAA;
-  font-weight: 300;
-}
 .error {
-    color: #e74c3c;
-    font-size: 13px;
-    margin-top: 4px;
-    text-align: right;
+  color: #e74c3c;
+  font-size: 13px;
+  text-align: right;
+ margin-top: 5px;
+ 
 }
 button {
     background-color: #47251B;
-    color: #fff;
+    color: #FFFFFF;
     padding: 16px 20px;
     border: none;
     border-radius: 10px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
     margin-top: 20px;
 }
 .login-link {
   margin-top: 22px;
-  font-size: 14px;
-  text-align: center;
-  color: #666;
-  font-weight: 400;
-
+  text-align: right; 
 }
-
 .login-link a {
   color: #3b1f1a;
   text-decoration: none;
@@ -102,10 +100,63 @@ button {
   margin-left: 40px;
 }
 
-.error {
-  color: #d87f7f;
-  font-size: 13px;
-  margin-top: -10px;
-  margin-bottom: 14px;
-  font-weight: 500;
+@media (max-width: 992px) {
+  .register-container {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .register-card {
+    max-width: 100%;
+    width: 100%;
+    padding: 25px;
+    border-radius: 20px;
+  }
+
+  .register-card h2,
+  .register-card p {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .login-link {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .illustration img {
+    max-width: 300px;
+    height: auto;
+  }
 }
+
+@media (max-width: 576px) {
+  .register-card {
+    padding: 20px;
+  }
+
+  input {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 14px 18px;
+  }
+
+  .register-card h2 {
+    font-size: 28px;
+  }
+
+  .register-card p {
+    font-size: 14px;
+  }
+
+  .illustration img {
+    max-width: 220px;
+  }
+}
+

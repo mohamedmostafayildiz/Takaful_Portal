@@ -6,7 +6,7 @@
 .navbar {
   background-color: #fff;
   border-bottom: 1px solid #ddd;
-  padding: 16px 0;
+  padding: 8px 0;
 }
 
 .container {
@@ -18,7 +18,7 @@
 }
 
 .logo img {
-  height: 50px;
+  height: 40px;
 }
 
 .nav-links {
@@ -52,18 +52,18 @@
 
 .auth-buttons .login {
   background-color: transparent;
-  border: 1px solid #5c2d0b;
-  color: #5c2d0b;
+  border: 1px solid #47251B;
+  color: #47251B;
 }
 
 .auth-buttons .signup {
-  background-color: #5c2d0b;
+  background-color: #47251B;
   color: white;
 }
 
 .hero {
   position: relative;
-  height: 500px;
+  height: 600px;
   overflow: hidden;
   color: white;
   text-align: center;
@@ -82,7 +82,7 @@
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  filter: brightness(0.6);
+  filter: brightness(0.4);
 }
 
 .content {
@@ -105,14 +105,13 @@
 }
 
 .start-btn {
-  background-color: #62381f;
+  background-color: #47251B;
   color: white;
-  border: none;
+  border: 1px solid #FFFFFF;
   padding: 10px 40px;
   font-size: 18px;
   cursor: pointer;
-  border-radius: 5px;
-  border-color: #ffffff;
+  border-radius: 8px;
 }
 
 .about-section {
@@ -121,58 +120,73 @@
   display: flex;
   justify-content: center;
 }
-
 .about-container {
   display: flex;
   max-width: 1200px;
   width: 100%;
-  gap: 50px;
+  gap: 0;
   align-items: center;
   padding-inline: 40px;
+  margin: 0 auto;
+  justify-content: space-between;
+
 }
 
 .about-image {
-  position: relative;
+  flex: 0 0 50%;
   max-width: 400px;
-  border: 3px solid #62381f;
+  height: 450px;
+  border: 5px solid #47251B;
   padding: 8px;
   border-radius: 8px;
+  position: relative;
+
 }
 
+
 .about-image img {
-  width: 100%;
-  border-radius: 5px;
+  width: 110%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
   display: block;
+  transform: translateX(50px) translateY(6px);
 }
 
 .about-text {
-  flex: 2;
-  color: #1a1a1a;
+  flex: 0 0 55%;
+  color: #000000;
   text-align: right;
-  line-height: 1.7;
+  line-height: 1.6;
 }
+
 
 .about-text h2 {
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   font-weight: 700;
-  font-size: 1.9rem;
+  font-size: 40px;
+  font-family: 'Almarai', sans-serif;
 }
 
+
 .about-text p {
-  font-size: 1.1rem;
+  font-size: 20px;
   margin-bottom: 30px;
+  font-weight: 380;
+  color: #000000;
+  font-family: 'cairo';
 }
 
 .cta-btn {
-  background-color: #62381f;
+  background-color: #47251B;
   color: white;
   border: 2px solid white;
-  padding: 5px 30px;
+  padding: 5px 40px;
   font-size: 18px;
   border-radius: 6px;
   cursor: pointer;
-
 }
+
 
 .insurance-types-section {
   padding: 80px 20px;
@@ -181,21 +195,21 @@
 }
 
 .section-title {
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
-  color: #1e1e1e;
+  color: #000000;
   margin-bottom: 50px;
+  font-family: 'Almarai', sans-serif;
 }
 
 .insurance-cards {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 35px;
   flex-wrap: wrap;
 }
 
 .insurance-cards .card {
-  background-color: #ffffff;
   width: 344px;
   padding: 16px;
   border: none;
@@ -212,7 +226,7 @@
 .insurance-cards .card p {
   font-size: 16px;
   font-weight: 800;
-  color: #7a4b2f;
+  color: #47251B;
   margin: 0;
 }
 
@@ -224,16 +238,18 @@
 
 .faq-title {
   text-align: center;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  color: #000000;
+  font-family: 'cairo';
 }
 
 .faq-subtitle {
   text-align: center;
-  color: #474747;
+  color: #000000;
   margin-bottom: 20px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .faq-item {
@@ -252,8 +268,15 @@
   font-size: 16px;
   font-weight: 650;
   padding: 12px;
+  color: #11110E;
+  font-family: 'Almarai', sans-serif;
 }
-
+.faq-answer{
+  font-size: 18px;
+  font-family: 'Almarai', sans-serif;
+  color: #3B3A3A;
+  margin-right: 10px;
+}
 .faq-arrow {
   width: 32px;
   height: 32px;
@@ -281,8 +304,114 @@
   color: #555;
 }
 
-
 .faq-arrow.active .arrow-icon {
   transform: rotate(45deg);
   color: #fff;
 }
+/* أساسي كما عندك */
+
+/* === Responsive === */
+
+@media (max-width: 1024px) {
+  .about-container {
+    flex-direction: column;
+    padding-inline: 20px;
+  }
+
+  .about-image {
+    max-width: 100%;
+    height: auto;
+    border-width: 3px;
+    margin-bottom: 30px;
+  }
+
+  .about-image img {
+    width: 100%;
+    transform: none;
+  }
+
+  .about-text {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .insurance-cards {
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .insurance-cards .card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .faq-section {
+    width: 95%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 400px;
+  }
+
+  .content h1 {
+    font-size: 1.8rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .start-btn {
+    padding: 10px 25px;
+    font-size: 16px;
+  }
+
+  .about-text h2 {
+    font-size: 26px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+  }
+
+  .insurance-cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .insurance-cards .card {
+    width: 100%;
+    max-width: none;
+  }
+
+  .faq-title {
+    font-size: 24px;
+  }
+
+  .faq-subtitle {
+    font-size: 12px;
+  }
+
+  .faq-question {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .faq-answer {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+}
+

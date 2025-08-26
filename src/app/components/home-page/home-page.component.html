@@ -4,20 +4,27 @@
       <img src="assets/imgs/logo2.jpg" alt="Logo" />
     </div>
 
-    <ul class="nav-links">
+    <div class="menu-toggle" id="menu-toggle" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links" [class.open]="menuOpen">
       <li><a href="#">الرئيسية</a></li>
       <li><a href="#">من نحن</a></li>
       <li><a href="#">أنواع التأمين</a></li>
       <li><a href="#">الأسئلة الشائعة</a></li>
       <li><a href="#">تواصل معنا</a></li>
     </ul>
-    <div class="auth-buttons">
-       <button class="login" routerLink="/login"> تسجيل دخول</button>
-     <button class="signup" routerLink="/signup">إنشاء حساب</button>
 
+    <div class="auth-buttons" [class.open]="menuOpen">
+      <button class="login" routerLink="/login">تسجيل دخول</button>
+      <button class="signup" routerLink="/signup">إنشاء حساب</button>
     </div>
   </div>
 </nav>
+
 
 <section class="hero">
   <img src="assets/imgs/Landing page.png" alt="Logo" />
@@ -47,6 +54,7 @@
     </div>
   </div>
 </section>
+
 <section class="insurance-types-section">
   <h2 class="section-title">أنواع التأمين</h2>
   <div class="insurance-cards">
@@ -56,26 +64,21 @@
     </div>
   </div>
 </section>
+
 <section class="faq-section">
   <h2 class="faq-title">كل اللي محتاج تعرفه قبل ما تبدأ</h2>
   <p class="faq-subtitle">
     جمعنالك أهم الأسئلة اللي ممكن تخطر في بالك قبل ما تبدأ رحلتك معانا — عشان تبقى مطمن وواثق في كل خطوة.
   </p>
-<div class="faq-item" *ngFor="let faq of faqs; let i = index">
-  <div class="faq-question" (click)="toggleAnswer(i)">
-    <span>{{ faq.question }}</span>
-
-    <div class="faq-arrow" [class.active]="faq.open">
-      <span class="arrow-icon"></span>
+  <div class="faq-item" *ngFor="let faq of faqs; let i = index">
+    <div class="faq-question" (click)="toggleAnswer(i)">
+      <span>{{ faq.question }}</span>
+      <div class="faq-arrow" [class.active]="faq.open">
+        <span class="arrow-icon"></span>
+      </div>
+    </div>
+    <div class="faq-answer" *ngIf="faq.open">
+      {{ faq.answer }}
     </div>
   </div>
-
-  <div class="faq-answer" *ngIf="faq.open">
-    {{ faq.answer }}
-  </div>
-</div>
-
-
 </section>
-
-
