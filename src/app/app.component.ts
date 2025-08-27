@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as AOS from 'aos';
-declare var $:any
-import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -10,23 +7,6 @@ import { AuthService } from 'src/app/services/auth.service';
   
 
 })
-export class AppComponent implements OnInit{
-  title = 'Alcan';
-  opened=false;
-  allTreaties:any;
-  loader:boolean=true;
-  constructor(public _AuthService:AuthService,){
-    AOS.init();
-  }
-  handleSideBar(){
-    document.getElementById("Dash_menu")?.classList.toggle("is-active");
-    this.opened=!this.opened
-  }
-
-  ngOnInit(): void {
-    AOS.init();
-    
- 
-  }
+export class AppComponent {
 
 }

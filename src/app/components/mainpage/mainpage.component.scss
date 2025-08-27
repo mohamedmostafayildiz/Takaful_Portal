@@ -1,16 +1,16 @@
 .nav-link {
-  color: #6c757d; 
+  color: #6c757d;
   font-weight: 500;
   transition: 0.2s;
 }
 
 .nav-link i {
   font-size: 1.2rem;
-  color: #6c757d; 
+  color: #6c757d;
 }
 
 .nav-link.active {
-  color: #5a2d23 !important; 
+  color: #5a2d23 !important;
   font-weight: bold;
 }
 
@@ -27,87 +27,83 @@
 }
 
 .search-box {
-  position: relative;
-  width: 220px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 5px 15px;
+  width: 250px;
+  border: 1px solid #ced4da;
+  margin-right: 35px;
 }
 
 .search-box input {
-  border-radius: 20px;
-  padding-right: 35px; 
-  height: 35px;
-  font-size: 14px;
-  background-color: #f8f9fa; 
-  border: 1px solid #ddd;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 0.9rem;
+  text-align: right;
+  color: #CCCCCC;
+  margin-right: -10px;
 }
 
-.search-box .search-icon {
-  position: absolute;
-  right: 10px;
-  color: #aaa;
-  font-size: 14px;
+.search-box input::placeholder {
+  color: #CCCCCC;
+  opacity: 1;
+}
+
+.search-box i {
+  color: #CCCCCC;
+  font-size: 16px;
+  margin-left: 1px;
+}
+.search-box input {
+  max-width: 220px;
 }
 .profile-img {
   width: 40px;
   height: 40px;
   object-fit: cover;
 }
-
-
-.search-box input {
-  max-width: 220px;
+.dropdown-arrow {
+  color: #7C8994;
+  font-size: 16px; 
+  cursor: pointer;
+  margin-right: 20px; 
 }
+
 
 .stats-cards {
-  display: flex;
-  justify-content: center; 
-  gap: 80px;             
-  margin-top: 100px;      
-  margin-right: 50px;     
+  justify-content: center;
+  margin-right: 50px;
 }
 
 .stat-card {
-  width: 280px;           
-  padding: 25px;          
+  width: 280px;
+  padding: 25px;
   text-align: center;
 }
+
 .stat-card h6 {
-  font-size: 18px;      
-  font-weight: bold;     
-  color: 979797;       
-  margin-bottom: 8px;    
-}
-.stat-card h5 {
-  font-size: 22px;       
+  font-size: 15px;
   font-weight: bold;
-  color: #000;           
+  color: #979797;
+  margin-bottom: 8px;
+  font-family: 'cairo';
 }
 
-.icon-circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 12px;
-  background-color: #d9c3a0; 
-  color: #6b4226;           
-  font-size: 18px;
+.stat-card h5 {
+  font-size: 15px;
+  font-weight: bold;
+  color: #000000;
 }
 
 .stat-card {
-  border: 1px solid #ddd;   
-  border-radius: 8px;       
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
   padding: 15px;
   min-width: 220px;
-  background-color: #fff;
-  transition: 0.3s ease-in-out;
+  margin-top: 30px;
 }
-
-.stat-card:hover {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
 
 .icon-circle {
   width: 50px;
@@ -117,7 +113,219 @@
   justify-content: center;
   align-items: center;
   margin-left: 12px;
-  background-color: #d9c3a0; 
   color: #6b4226;
   font-size: 18px;
+}
+
+.row.mt-5.ms-3 {
+  margin-right: 100px !important;
+  padding-left: 12px;
+}
+
+.recent-activities-box {
+  border: 1px solid #e6e6e6;
+  padding: 16px;
+  border-radius: 8px;
+  height: 16rem;
+}
+
+.recent-activities-box h5 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000000;
+  margin-top: 8px;
+}
+
+.recent-activities-box ul li {
+  font-size: 14px;
+  color: #47251B;
+  margin-bottom: 16px;
+  line-height: 1.6;
+  font-weight: bold;
+}
+.recent-activities-box ul li .text{
+  color: #B1B1B1;
+  font-size: 12px;
+  font-weight: 600;
+}
+.quick-access-wrapper {
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  height: 16rem;
+  width: 30rem;
+}
+
+.quick-access-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.quick-access-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  direction: rtl;
+}
+
+.btn-primary-dark {
+  background-color: #47251B;
+  color: #FFFFFF;
+  padding: 16px 0;
+  border-radius: 6px;
+  min-width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+}
+
+.custom-outline-btn {
+  padding: 16px 0;
+  min-width: 100%;
+  height: 80px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #47251B;
+}
+.help-box{
+  border: 1px solid #e6e6e6; 
+  border-radius: 8px;
+  width: 11rem;
+  margin-left: 20rem;
+  height: 8rem;
+}
+.faq-box {
+  border: 1px solid #e6e6e6; 
+  width: 45rem;
+  height: 8rem;
+}
+.help-box h5{
+  font-size: 20px;  
+  color: #000000;
+  
+}
+.faq-box h5{
+  font-size: 20px;  
+  color: #000000;
+}
+.text-brown {
+  color: #47251B;
+  margin-top: 20px;
+}
+.faq-question {
+  font-weight: bold;
+  color: #47251B;
+  font-size: 15px;
+}
+
+.faq-answer {
+  color: #B1B1B1;
+  font-size: 14px;
+
+}
+/* موبايل صغير */
+@media (max-width: 576px) {
+  .search-box {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .stats-cards {
+    flex-direction: column !important;
+    align-items: center !important;
+    margin: 0 !important;
+  }
+
+  .stat-card {
+    width: 90% !important;
+    margin: 15px 0 !important;
+  }
+
+  .recent-activities-box,
+  .quick-access-wrapper,
+  .faq-box,
+  .help-box {
+    width: 100% !important;
+    height: auto !important;
+    margin: 10px 0 !important;
+  }
+
+  .quick-access-buttons {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .row.mt-5.ms-3 {
+    margin: 0 !important;
+    padding: 0 12px !important;
+  }
+}
+
+/* شاشات تابلت */
+@media (max-width: 768px) {
+  .search-box {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .stats-cards {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 16px;
+  }
+
+  .stat-card {
+    width: 100% !important;
+    margin: 10px 0 !important;
+  }
+
+  .recent-activities-box,
+  .quick-access-wrapper,
+  .faq-box,
+  .help-box {
+    width: 100% !important;
+    height: auto !important;
+    margin: 10px 0 !important;
+  }
+
+  .quick-access-buttons {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px;
+  }
+
+  .row.mt-5.ms-3 {
+    margin: 0 !important;
+    padding: 0 12px !important;
+  }
+}
+
+/* شاشات لابتوب */
+@media (max-width: 992px) {
+  .faq-box {
+    width: 100% !important;
+  }
+
+  .help-box {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .quick-access-wrapper {
+    width: 100% !important;
+  }
+
+  .stat-card {
+    width: 100% !important;
+  }
+
+  .quick-access-buttons {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px;
+  }
+
+  .row.mt-5.ms-3 {
+    margin-right: 0 !important;
+  }
 }

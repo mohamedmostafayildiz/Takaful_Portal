@@ -11,13 +11,10 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {LottieModule} from 'ngx-lottie';
 import { NgxPaginationModule } from 'ngx-pagination';
 import player from 'lottie-web';
-import { MaterialsModule } from './materials/materials.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {MatSelectModule} from '@angular/material/select';
-
-import { SearchPipe } from './pipes/search.pipe';
 import {MatIconModule} from '@angular/material/icon'
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -34,26 +31,25 @@ import { LoginComponent } from './components/login/login.component';
 import { ForgetpasswordComponent } from './components/forgetpassword/forgetpassword.component';
 import { OtpPageComponent } from './components/otp-page/otp-page.component';
 import { MainpageComponent } from './components/mainpage/mainpage.component';
+import { InsurancepageComponent } from './components/insurancepage/insurancepage.component';
 export function playerFactory(){
   return player;
 }
 @NgModule({
   declarations: [
     AppComponent,
-  
-    SearchPipe,
       HomePageComponent,
     SignupComponent,
     LoginComponent,
     ForgetpasswordComponent,
     OtpPageComponent,
     MainpageComponent,
+    InsurancepageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialsModule,
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule,

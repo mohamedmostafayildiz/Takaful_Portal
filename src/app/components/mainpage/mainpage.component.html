@@ -1,24 +1,21 @@
 <div class="container-fluid">
   <div class="row">
- 
     <div class="col-md-10 p-0">
-    
       <nav class="navbar navbar-light bg-white shadow-sm px-3">
         <div class="container-fluid d-flex flex-row-reverse justify-content-between align-items-center">
-          
-        
           <form class="d-flex align-items-center search-box">
-            <i class="fa fa-search text-muted me-2"></i>
-            <input class="form-control form-control-sm" type="search" placeholder="ابحث..." aria-label="Search">
+            <i class="fa fa-search me-2"></i>
+            <input type="search" placeholder="...ابحث عن" aria-label="Search">
           </form>
-
           <div class="d-flex align-items-center">
-            <div class="d-flex align-items-center me-3">
-              <div class="text-end me-2">
-                <strong>أحمد محمد</strong><br>
-                <small class="text-muted">ahmed@gmail.com</small>
-              </div>
-              <img src="assets/imgs/profile.jpg" alt="Logo" class="profile-img rounded-circle border">
+            <div class="d-flex align-items-center flex-row-reverse me-3">
+              <div class="d-flex align-items-center flex-row-reverse">
+                <img src="assets/imgs/profile.jpg" alt="Logo" class="profile-img rounded-circle border ms-2">
+                <div class="text-end">
+                  <strong>أحمد محمد</strong><br>
+                  <small class="text-muted">ahmed@gmail.com</small>
+                </div>
+              </div><i class="fa fa-caret-down ms-2 text-secondary"></i>
             </div>
 
             <div class="position-relative">
@@ -32,41 +29,92 @@
       </nav>
 
       <div class="stats-cards d-flex gap-5 mt-5 ms-3">
-       
         <div class="stat-card d-flex align-items-center flex-row-reverse">
           <div class="icon-circle">
             <i class="fa fa-file-text"></i>
           </div>
           <div class="text-end">
             <h6 class="mb-1">عدد الوثائق</h6>
-            <h5 class="mb-0">300</h5>
+            <h5 class="mb-0">2</h5>
           </div>
         </div>
-
         <div class="stat-card d-flex align-items-center flex-row-reverse">
           <div class="icon-circle">
             <i class="fa fa-exclamation-circle"></i>
           </div>
           <div class="text-end">
             <h6 class="mb-1">عدد الشكاوى</h6>
-            <h5 class="mb-0">45</h5>
+            <h5 class="mb-0">2</h5>
           </div>
         </div>
-
-      
         <div class="stat-card d-flex align-items-center flex-row-reverse">
           <div class="icon-circle">
             <i class="fa fa-money"></i>
           </div>
           <div class="text-end">
             <h6 class="mb-1">عدد التعويضات</h6>
-            <h5 class="mb-0">78</h5>
+            <h5 class="mb-0">2</h5>
           </div>
         </div>
       </div>
-    </div>
+      <div class="row mt-5 ms-3">
+        <div class="col-md-6">
+          <div class="recent-activities-box">
+            <h5 class="fw-bold mb-4 text-end">الأنشطة الأخيرة</h5>
+            <ul class="list-unstyled text-end">
+              <li class="mb-3">
+                <strong>45678</strong> تم تحميل وثيقة التأمين رقم <br>
+                <small class="text">10:30 صباحاً | 22 أغسطس 2023</small>
+              </li>
+              <li class="mb-3">
+                تم تقديم شكوى بخصوص تأخر التعويض<br>
+                <small class="text">10:30 صباحاً | 22 أغسطس 2023</small>
+              </li>
+              <li>
+                <strong>45678</strong> تم تحميل الملف الخاص برقم<br>
+                <small class="text">10:30 صباحاً | 22 أغسطس 2023</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="quick-access-wrapper p-4 rounded bg-white">
+            <h5 class="quick-access-title text-end">الوصول السريع</h5>
+            <div class="quick-access-buttons">
+              <button class="btn btn-primary-dark" routerLink="/insurancepage">طلب تأمين جديد</button>
+              <button class="btn custom-outline-btn">طلب تعويض جديد</button>
+              <button class="btn custom-outline-btn">تحميل وثيقة</button>
+              <button class="btn custom-outline-btn">شكوى جديدة</button>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4 ">
+          <div class="col-md-6">
+            <div class="faq-box p-4 rounded bg-white">
+              <h5 class="text-end fw-bold mb-3">الأسئلة الشائعة</h5>
 
-    
+              <div class="faq-item text-end mb-3">
+                <p class="faq-question mb-1">كيف أطلب وثيقة التأمين الجديدة؟</p>
+                <p class="faq-answer mb-0">من خلال الضغط على زر "طلب تأمين جديد" في الصفحة الرئيسية</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="help-box p-4 rounded bg-white">
+              <h5 class="text-end fw-bold mb-3">هل تحتاج مساعدة؟</h5>
+              <div class="d-flex align-items-center justify-content-end text-brown">
+                <span class="fw-bold fs-4 me-2">16458</span>
+                <i class="fa fa-phone fa-lg"></i>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
     <div class="col-md-2 bg-light min-vh-100 p-3 shadow-sm">
       <div class="text-center mb-4">
         <img src="assets/imgs/logo2.jpg" alt="Logo" class="img-fluid mb-2" />

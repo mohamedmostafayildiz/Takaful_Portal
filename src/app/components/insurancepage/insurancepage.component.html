@@ -1,0 +1,81 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 p-0">
+      <nav class="navbar navbar-light bg-white shadow-sm px-3">
+        <div class="container-fluid d-flex flex-row-reverse justify-content-between align-items-center">
+          <form class="d-flex align-items-center search-box">
+            <i class="fa fa-search me-2"></i>
+            <input type="search" placeholder="...ابحث عن" aria-label="Search">
+          </form>
+          <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center flex-row-reverse me-3">
+              <div class="d-flex align-items-center flex-row-reverse">
+                <img src="assets/imgs/profile.jpg" alt="Logo"
+                  class="profile-img rounded-circle border ms-2">
+                <div class="text-end">
+                  <strong>أحمد محمد</strong><br>
+                  <small class="text-muted">ahmed@gmail.com</small>
+                </div>
+              </div><i class="fa fa-caret-down ms-2 text-secondary"></i>
+            </div>
+
+            <div class="position-relative">
+              <i class="fa fa-bell fa-lg text-secondary"></i>
+              <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                3
+              </span>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section class="insurance-types-section">
+        <div class="section-header">
+          <h2 class="main-title">التأمينات</h2>
+          <p class="sub-title">اختر نوع التأمين</p>
+        </div>
+
+       <div class="insurance-cards">
+                    <div class="card" *ngFor="let type of insuranceTypes">
+                        <img [src]="type.imgSrc" [alt]="type.alt" />
+                        <p class="card-title">{{ type.title }}</p>
+                    </div>
+                </div>
+      </section>
+    </div>
+
+    <div class="col-md-2 bg-light min-vh-100 p-3 shadow-sm">
+      <div class="text-center mb-4">
+        <img src="assets/imgs/logo2.jpg" alt="Logo" class="img-fluid mb-2" />
+      </div>
+
+      <ul class="nav flex-column text-end">
+        <li class="nav-item mb-2">
+          <a class="nav-link d-flex align-items-center justify-content-end gap-2" href="#">
+            الرئيسية <i class="fa fa-home"></i>
+          </a>
+        </li>
+        <li class="nav-item mb-2">
+          <a class="nav-link d-flex align-items-center justify-content-end gap-2" href="#">
+            وثائق <i class="fa fa-file-text"></i>
+          </a>
+        </li>
+        <li class="nav-item mb-2">
+          <a class="nav-link d-flex align-items-center justify-content-end gap-2" href="#">
+            شكاوى <i class="fa fa-exclamation-circle"></i>
+          </a>
+        </li>
+        <li class="nav-item mb-2">
+          <a class="nav-link d-flex align-items-center justify-content-end gap-2" href="#">
+            تعويضات <i class="fa fa-money"></i>
+          </a>
+        </li>
+        <li class="nav-item mb-2">
+          <a class="nav-link d-flex align-items-center justify-content-end gap-2" href="#">
+            إعدادات <i class="fa fa-cog"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

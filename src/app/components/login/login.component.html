@@ -1,20 +1,19 @@
 <div class="login-container">
     <div class="login-card">
         <h2>تسجيل الدخول</h2>
-        <p>مرحبًا بك في افق منصة تعليميه متكافئة</p>
+        <p>مرحبًا بك في أفق، منصة تعليمية متكافئة</p>
 
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div class="form-field">
-                <label for="email">البريد الإلكتروني</label>
-                <input formControlName="email" type="email" id="email" />
-                <div *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid" class="error">
-                    بريد إلكتروني غير صالح
+                <label for="identifier">اسم المستخدم أو البريد الإلكتروني</label>
+                <input formControlName="identifier" type="text" id="identifier" />
+                <div *ngIf="loginForm.get('identifier')?.touched && loginForm.get('identifier')?.invalid" class="error">
+                    هذا الحقل مطلوب
                 </div>
-
             </div>
 
             <div class="form-field">
-                <label for="password">الباسوورد </label>
+                <label for="password">الباسوورد</label>
                 <input formControlName="password" type="password" id="password" />
                 <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid" class="error">
                     كلمة المرور مطلوبة
@@ -27,10 +26,9 @@
                     <label for="remember">تذكر كلمة المرور</label>
                 </div>
                 <a routerLink="/forgetpassword" class="forgot-link">هل نسيت كلمة المرور؟</a>
-
             </div>
 
-            <button type="submit" routerLink="/mainpage">تسجيل دخول</button>
+            <button type="submit">تسجيل دخول</button>
         </form>
     </div>
 

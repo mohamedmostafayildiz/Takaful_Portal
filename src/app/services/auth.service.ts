@@ -1,40 +1,21 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { JwtHelperService } from '@auth0/angular-jwt';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  // baseURL:any='https://1f49-156-204-25-54.ngrok-free.app/';
-  baseURL:any='http://97.74.82.75:7878/';
+  private loginUrl = 'https://042190a1264a.ngrok-free.app/api/Auth/login';
+  private registerUrl = 'https://042190a1264a.ngrok-free.app/api/Auth/register';
 
-  configGet:any ={headers: new HttpHeaders().set("ngrok-skip-browser-warning", "true")}
-  ConfigPost:any = { headers: new HttpHeaders().set('Content-Type', 'application/json') };
-  _JwtHelperService =new JwtHelperService()
-  constructor(private _HttpClient:HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-
-  // IsLoggedIn(){
-  //   return !!localStorage.getItem('SchoolsToken')
-  // }
-
-
-    // User Login
-  UserLogin(body:any){
-    return this._HttpClient.post(this.baseURL+'Auth/Login',body,this.ConfigPost)
+  login(credentials: { identifier: string; password: string }): Observable<any> {
+    return this.http.post(this.loginUrl, credentials);
   }
 
-    // Sign Up
-    signUp(body:any){
-    return this._HttpClient.post(this.baseURL+'Auth/Register',body,this.ConfigPost)
-  }
-
-  isLoggedDetails(){
-    return  JSON.parse(localStorage.getItem("AlcanResponse")!);
-  }
-  isLoggedIn(){
-    var token = localStorage.getItem("UserAlcanToken");
-    return !this._JwtHelperService.isTokenExpired(token);
+  signup(data: { name: string; phone: string; email: string; password: string }): Observable<any> {
+    return this.http.post(this.registerUrl, data);
   }
 }
