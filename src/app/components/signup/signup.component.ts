@@ -12,7 +12,7 @@ export class SignupComponent implements OnInit {
   registerForm!: FormGroup;
   submitted = false;
 
-  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {}
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
@@ -28,24 +28,43 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit(): void {
-  console.log('onSubmit fired');
-  this.submitted = true;
+    console.log('onSubmit fired');
+    this.submitted = true;
 
-  if (this.registerForm.invalid) {
-    this.registerForm.markAllAsTouched();
-    return;
+    if (this.registerForm.invalid) {
+      this.registerForm.markAllAsTouched();
+      return;
+    }
+    const signupData = {
+      name: this.registerForm.get('name')?.value,
+      email: this.registerForm.get('email')?.value,
+      phoneNumber: this.registerForm.get('phone')?.value,
+      password: this.registerForm.get('password')?.value,
+    };
+    this.authService.signup(signupData).subscribe({
+      next: (res) => {
+        console.log('تم التسجيل بنجاح:', res);
+        // swal.fire({
+        //   title: "Good job!",
+        //   text: "You clicked the button!",
+        //   icon: "success"
+        // });
+        //alert(' تم إنشاء الحساب بنجاح! يمكنك تسجيل الدخول الآن.');
+        this.router.navigate(['/login']);
+      },
+      error: (err) => {
+
+
+        //console.error('فشل التسجيل:', err);
+        // alert(err.error.message);
+
+      }
+    });
   }
 
-  this.authService.signup(this.registerForm.value).subscribe({
-    next: (res) => {
-      console.log('تم التسجيل بنجاح:', res);
-      this.router.navigate(['/login']);
-    },
-    error: (err) => {
-      console.error('فشل التسجيل:', err);
-      alert('فشل في إنشاء الحساب. تأكد من صحة البيانات.');
-    }
-  });
-}
 
 }
+function swal(arg0: { title: string; text: string; icon: string; }) {
+  throw new Error('Function not implemented.');
+}
+

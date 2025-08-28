@@ -1,0 +1,168 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 p-0">
+            <nav class="navbar navbar-light bg-white shadow-sm px-3">
+                <div class="container-fluid d-flex flex-row-reverse justify-content-between align-items-center">
+                    <form class="d-flex align-items-center search-box">
+                        <i class="fa fa-search me-2"></i>
+                        <input type="search" placeholder="...ابحث عن" aria-label="Search">
+                    </form>
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center flex-row-reverse me-3">
+                            <div class="d-flex align-items-center flex-row-reverse">
+                                <img src="assets/imgs/profile.jpg" alt="Logo"
+                                    class="profile-img rounded-circle border ms-2">
+                                <div class="text-end">
+                                    <strong>أحمد محمد</strong><br>
+                                    <small class="text-muted">ahmed@gmail.com</small>
+                                </div>
+                            </div><i class="fa fa-caret-down ms-2 text-secondary"></i>
+                        </div>
+
+                        <div class="position-relative">
+                            <i class="fa fa-bell fa-lg text-secondary"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                3
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <section class="insurance-types-section">
+                <div class="section-header text-end mb-4">
+                    <h2 class="main-title mb-2">
+                        <span class="text-muted">التأمينات</span> /
+                        <span class="text-brown fw-bold">تأمين سيارات</span>
+                    </h2>
+                    <p class="request-subtitle">طلب تأمين سيارات</p>
+                </div>
+                <div class="car-info bg-white rounded shadow-sm mb-4">
+                    <h5 class="mb-4 section-title">بيانات السيارة</h5>
+                    <form class="row g-4 text-end justify-content-center">
+                        <!-- الصف الأول -->
+                        <div class="col-md-6">
+                            <label for="make" class="form-label">الماركة <span class="text-danger">*</span></label>
+                            <select id="make" class="form-select">
+                                <option selected>اختر الماركة</option>
+                                <option value="1">ماركة 1</option>
+                                <option value="2">ماركة 2</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="model" class="form-label">الموديل <span class="text-danger">*</span></label>
+                            <select id="model" class="form-select">
+                                <option selected>الموديل</option>
+                                <option value="1">موديل 1</option>
+                                <option value="2">موديل 2</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="category" class="form-label">الفئة <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="category" placeholder="الفئة">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="year" class="form-label">سنة الصنع <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="year" placeholder="سنة الصنع">
+                        </div>
+                         <div class="col-md-6">
+                            <label for="engine" class="form-label">نوع المحرك <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="engine" placeholder="نوع المحرك">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="price" class="form-label">سعر السيارة <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="price" placeholder="سعر السيارة">
+                        </div>
+                       
+                    </form>
+                </div>
+
+               <div class="documents bg-white p-3 rounded shadow-sm">
+  <h5 class="mb-4 fw-bold fs-5">مستندات أخرى</h5>
+  <div class="row text-end g-4">
+    <div class="col-6 col-md-3">
+      <label class="form-label fw-semibold">فاتورة الشراء <span class="text-danger">*</span></label>
+      <div class="upload-box position-relative mx-auto">
+        <div class="upload-icon-circle d-flex justify-content-center align-items-center mb-2">
+          <!-- أيقونة تحميل -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#9B9B9B" viewBox="0 0 24 24"><path d="M12 5v10M7 10l5 5 5-5M3 20h18"/></svg>
+        </div>
+        <input type="file" class="file-input position-absolute top-0 start-0 w-100 h-100" aria-label="فاتورة الشراء">
+      </div>
+      <p class="upload-text text-center text-muted mt-1 fs-6">فاتورة الشراء</p>
+    </div>
+
+    <div class="col-6 col-md-3">
+      <label class="form-label fw-semibold">رخصة القيادة <span class="text-danger">*</span></label>
+      <div class="upload-box position-relative mx-auto">
+        <div class="upload-icon-circle d-flex justify-content-center align-items-center mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#9B9B9B" viewBox="0 0 24 24"><path d="M12 5v10M7 10l5 5 5-5M3 20h18"/></svg>
+        </div>
+        <input type="file" class="file-input position-absolute top-0 start-0 w-100 h-100" aria-label="رخصة القيادة">
+      </div>
+      <p class="upload-text text-center text-muted mt-1 fs-6">رخصة القيادة</p>
+    </div>
+
+    <div class="col-6 col-md-3">
+      <label class="form-label fw-semibold">البطاقة الشخصية <span class="text-danger">*</span></label>
+      <div class="upload-box position-relative mx-auto">
+        <div class="upload-icon-circle d-flex justify-content-center align-items-center mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#9B9B9B" viewBox="0 0 24 24"><path d="M12 5v10M7 10l5 5 5-5M3 20h18"/></svg>
+        </div>
+        <input type="file" class="file-input position-absolute top-0 start-0 w-100 h-100" aria-label="البطاقة الشخصية">
+      </div>
+      <p class="upload-text text-center text-muted mt-1 fs-6">البطاقة الشخصية</p>
+    </div>
+
+    <div class="col-6 col-md-3">
+      <label class="form-label fw-semibold">الوجه الأمامي للبطاقة <span class="text-danger">*</span></label>
+      <div class="upload-box position-relative mx-auto">
+        <div class="upload-icon-circle d-flex justify-content-center align-items-center mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#9B9B9B" viewBox="0 0 24 24"><path d="M12 5v10M7 10l5 5 5-5M3 20h18"/></svg>
+        </div>
+        <input type="file" class="file-input position-absolute top-0 start-0 w-100 h-100" aria-label="الوجه الأمامي للبطاقة">
+      </div>
+      <p class="upload-text text-center text-muted mt-1 fs-6">الوجه الأمامي للبطاقة</p>
+    </div>
+  </div>
+</div>
+
+            </section>
+
+        </div>
+
+        <div class="col-md-2 bg-light min-vh-100 p-3 shadow-sm">
+            <div class="text-center mb-4">
+                <img src="assets/imgs/logo2.jpg" alt="Logo" class="img-fluid mb-2" />
+            </div>
+
+            <ul class="nav flex-column text-end">
+                <li class="nav-item mb-2">
+                    <a class="nav-link d-flex align-items-center justify-content-end gap-2" href="#">
+                        الرئيسية <i class="fa fa-home"></i>
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link d-flex align-items-center justify-content-end gap-2" href="#">
+                        وثائق <i class="fa fa-file-text"></i>
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link d-flex align-items-center justify-content-end gap-2" href="#">
+                        شكاوى <i class="fa fa-exclamation-circle"></i>
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link d-flex align-items-center justify-content-end gap-2" href="#">
+                        تعويضات <i class="fa fa-money"></i>
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link d-flex align-items-center justify-content-end gap-2" href="#">
+                        إعدادات <i class="fa fa-cog"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

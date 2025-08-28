@@ -21,10 +21,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
 import {Ng2TelInputModule} from 'ng2-tel-input';
 import { NgxMatDatetimePickerModule, NgxMatNativeDateModule, NgxMatTimepickerModule } from '@angular-material-components/datetime-picker';
-
-
 import { MatFileUploadModule } from 'angular-material-fileupload';
-
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
@@ -32,6 +29,7 @@ import { ForgetpasswordComponent } from './components/forgetpassword/forgetpassw
 import { OtpPageComponent } from './components/otp-page/otp-page.component';
 import { MainpageComponent } from './components/mainpage/mainpage.component';
 import { InsurancepageComponent } from './components/insurancepage/insurancepage.component';
+import { CarinsuranceComponent } from './components/carinsurance/carinsurance.component';
 export function playerFactory(){
   return player;
 }
@@ -45,6 +43,7 @@ export function playerFactory(){
     OtpPageComponent,
     MainpageComponent,
     InsurancepageComponent,
+    CarinsuranceComponent,
   ],
   imports: [
     BrowserModule,
